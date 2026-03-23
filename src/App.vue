@@ -20,8 +20,8 @@
     <main class="container">
       <section class="bio-card">
         <p>
-          我是 Eleanor，目前就讀於 **資訊工程系**。
-          我擅長使用 **Django** 處理後端邏輯，並透過 **Vue.js** 打造直覺的前端介面。
+          我是 Eleanor，目前就讀於資訊工程系。
+          我擅長使用Django處理後端邏輯，並透過Vue.js打造直覺的前端介面。
           這是我參考專業學術模板 打造的作品集。
         </p>
       </section>
@@ -48,6 +48,9 @@
             <li>整合Tiptap編輯器與Django後端。</li>
             <li>實作區塊式編輯與自動存檔功能。</li>
           </ul>
+          <BaseButton href="https://github.com/eleanorhhh/tiptap.git" type="primary">
+            🐱 GitHub
+          </BaseButton>
         </div>
       </section>
     </main>
