@@ -49,8 +49,7 @@
             <span class="date-label">2026.03</span>
           </div>
           <ul class="styled-list">
-            <li>整合 Tiptap 編輯器與 Django 後端。</li>
-            <li>實作區塊式編輯與自動存檔功能。</li>
+            基於 Vue 3 與 Django 獨立開發類 Notion 編輯器，實作客製化斜線指令 (Slash Command) 提升 UX，並採用 UUID 與 RESTful API 確保結構化資料的安全儲存。
           </ul>
           <BaseButton href="https://github.com/eleanorhhh/tiptap.git" type="primary">
             🐱 GitHub
