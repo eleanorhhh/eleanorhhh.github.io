@@ -6,20 +6,27 @@
     </button>
 
     <header class="glass-header">
-      <div class="container">
-        <h1><span class="chinese-name">洪郁</span>(Eleanor)</h1>
-        <div class="button-group">
-          <BaseButton href="https://github.com" type="primary">🐱 GitHub</BaseButton>
-          <BaseButton href="#" type="secondary">📄 Resume</BaseButton>
+      <div class="container header-content">
+        <div class="header-text">
+          <h1><span class="chinese-name">洪郁婷</span>(Eleanor)</h1>
+          <div class="button-group">
+            <BaseButton href="https://github.com" type="primary">🐱 GitHub</BaseButton>
+            <BaseButton href="#" type="secondary">📄 Resume</BaseButton>
+          </div>
+        </div>
+
+        <div class="header-image">
+          <img src="../assets/profile.jpg" alt="Eleanor Avatar" class="profile-avatar" />
         </div>
       </div>
     </header>
 
+
     <main class="container">
       <section class="bio-card">
         <p>
-          我是 Eleanor，目前就讀於高雄科技大學資訊工程系。[cite: 2]
-          我擅長使用 Django 處理後端邏輯，並透過 Vue.js 打造直覺的前端介面。[cite: 2]
+          我是 Eleanor，目前就讀於高雄科技大學資訊工程系。
+          我擅長使用 Django 處理後端邏輯，並透過 Vue.js 打造直覺的前端介面。
         </p>
       </section>
 
@@ -28,9 +35,9 @@
         <div class="info-card">
           <div class="card-header">
             <h3>高雄科技大學</h3>
-            <span class="date-label">2023 - 2027 (預計)[cite: 2]</span>
+            <span class="date-label">2023 - 2027 (預計)</span>
           </div>
-          <p class="sub-text">資訊工程系 學士[cite: 2]</p>
+          <p class="sub-text">資訊工程系 學士</p>
         </div>
       </section>
 
@@ -39,10 +46,10 @@
         <div class="info-card highlight-border">
           <div class="card-header">
             <h3>Notion-like Editor</h3>
-            <span class="date-label">2026.03[cite: 2]</span>
+            <span class="date-label">2026.03</span>
           </div>
           <ul class="styled-list">
-            <li>整合 Tiptap 編輯器與 Django 後端。[cite: 2]</li>
+            <li>整合 Tiptap 編輯器與 Django 後端。</li>
             <li>實作區塊式編輯與自動存檔功能。</li>
           </ul>
           <BaseButton href="https://github.com/eleanorhhh/tiptap.git" type="primary">
@@ -105,4 +112,43 @@ header { background-color: var(--bg-card); border-bottom: 1px solid var(--border
 .date-label { font-size: 0.85rem; color: var(--text-sub); background: var(--bg-main); padding: 2px 8px; border-radius: 4px; }
 .theme-toggle { position: fixed; top: 1.5rem; right: 1.5rem; background: var(--bg-card); border: 1px solid var(--border-color); width: 45px; height: 45px; border-radius: 50%; cursor: pointer; z-index: 1000; }
 .button-group { display: flex; gap: 12px; margin-top: 24px; }
+
+/* --- 新增的 Header 排版樣式 --- */
+.header-content {
+  display: flex;
+  justify-content: space-between; /* 讓文字與圖片分居左右 */
+  align-items: center;            /* 垂直置中 */
+  gap: 2rem;                      /* 避免縮小時文字跟圖片太靠近 */
+}
+
+/* 大頭貼的樣式設計 */
+.profile-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;             /* 變成圓形 */
+  object-fit: cover;              /* 確保圖片比例正常且填滿圓形 */
+  border: 4px solid var(--border-color); /* 配合主題的邊框 */
+  box-shadow: var(--card-shadow);        /* 加上陰影增加立體感 */
+  transition: transform 0.3s ease;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05); /* 滑鼠游標移過去時微微放大 */
+}
+
+/* 針對手機版 (RWD) 的調整：螢幕較小時改為直向排列 */
+@media (max-width: 600px) {
+  .header-content {
+    flex-direction: column-reverse; /* 讓圖片在上面，文字在下面 (若想相反可改為 column) */
+    text-align: center;
+  }
+  .button-group {
+    justify-content: center;
+  }
+  .profile-avatar {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+  }
+}
 </style>
