@@ -16,7 +16,7 @@
         </div>
 
         <div class="header-image">
-          <img src="../assets/profile.jpg" alt="Eleanor Avatar" class="profile-avatar" />
+          <img src="../assets/profile.JPG" alt="Eleanor Avatar" class="profile-avatar" />
         </div>
       </div>
     </header>
