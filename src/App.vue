@@ -1,6 +1,5 @@
 <template>
-  <!-- 登入動畫組件 -->
-  <LoginIntro />
+
 
   <!-- 主要作品集組件 -->
   <PortfolioContent
@@ -11,7 +10,6 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import LoginIntro from './components/LoginIntro.vue'
 import PortfolioContent from './components/PortfolioContent.vue'
 
 const isDark = ref(false)

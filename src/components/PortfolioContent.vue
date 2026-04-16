@@ -1,153 +1,46 @@
 <template>
-  <div :class="['portfolio-root', { 'dark-theme': isDark }]">
-    <!-- 主題切換按鈕 -->
-    <button @click="emitToggle" class="theme-toggle">
-      {{ isDark ? '☀️' : '🌙' }}
-    </button>
+  <section class="p-8 bg-bg-paper">
+    <h2 class="text-6xl font-black mb-12 uppercase tracking-tighter italic">
+      <span class="bg-brand-orange text-white px-4 border-4 border-black shadow-neo">Featured</span>
+      <span class="block mt-2 text-black">Works</span>
+    </h2>
 
-    <header class="glass-header">
-      <div class="container header-content">
-        <div class="header-text">
-          <h1><span class="chinese-name">洪郁婷</span>(Eleanor)</h1>
-          <div class="button-group">
-            <BaseButton href="https://github.com" type="primary">🐱 GitHub</BaseButton>
-            <BaseButton href="#" type="secondary">📄 Resume</BaseButton>
-          </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="md:col-span-2 border-4 border-black bg-white shadow-neo hover:translate-x-1 hover:translate-y-1 hover:shadow-neo-hover transition-all">
+        <div class="p-4 border-b-4 border-black bg-brand-blue text-white flex justify-between items-center">
+          <span class="font-bold uppercase">Web App / Full-stack</span>
+          <span class="text-xs">2026</span>
         </div>
-
-        <div class="header-image">
-          <img src="../assets/profile.JPG" alt="Eleanor Avatar" class="profile-avatar" />
+        <div class="p-6 flex flex-col lg:flex-row gap-6">
+          <div class="lg:w-1/2">
+            <h3 class="text-3xl font-black mb-4">Notion-like Document System</h3>
+            <p class="text-gray-700 leading-relaxed mb-6">
+              結合 Vue 3 與 Django 架構，開發具備 Tiptap 核心的即時文件編輯器。
+              重點在於**互動回饋機制**（如 Slash Commands），將資工的邏輯底蘊轉化為流暢的操作體驗。
+            </p>
+            <div class="flex gap-2 flex-wrap">
+              <span class="px-3 py-1 bg-brand-yellow border-2 border-black font-bold text-xs">Vue.js</span>
+              <span class="px-3 py-1 bg-brand-yellow border-2 border-black font-bold text-xs">Django</span>
+              <span class="px-3 py-1 bg-brand-yellow border-2 border-black font-bold text-xs">Tiptap</span>
+            </div>
+          </div>
+          <div class="lg:w-1/2 bg-gray-200 border-4 border-black aspect-video flex items-center justify-center">
+             <span class="text-gray-500 font-bold">[ Project Preview ]</span>
+          </div>
         </div>
       </div>
-    </header>
 
-
-    <main class="container">
-      <section class="bio-card">
-        <p>
-          我是 Eleanor，目前就讀於高雄科技大學資訊工程系。
-          我擅長使用 Django 處理後端邏輯，並透過 Vue.js 打造直覺的前端介面。
-        </p>
-      </section>
-
-      <section>
-        <h2 class="section-title">🎓 Education</h2>
-        <div class="info-card">
-          <div class="card-header">
-            <h3>高雄科技大學</h3>
-            <span class="date-label">2023 - 2027 (預計)</span>
-          </div>
-          <p class="sub-text">資訊工程系 學士</p>
+      <div class="border-4 border-black bg-brand-yellow shadow-neo p-6 flex flex-col justify-between">
+        <h3 class="text-2xl font-black italic underline uppercase">Frontend Skills</h3>
+        <ul class="font-bold space-y-2 mt-4">
+          <li>✦ Tailwind CSS / CSS Animation</li>
+          <li>✦ TypeScript Mastery</li>
+          <li>✦ UI Interaction Logic</li>
+        </ul>
+        <div class="mt-6 p-4 bg-white border-2 border-black">
+          <p class="text-sm font-bold text-center">讓程式不僅是邏輯，更是能被感知的設計。</p>
         </div>
-      </section>
-
-      <section>
-        <h2 class="section-title">💻 Projects</h2>
-        <div class="info-card highlight-border">
-          <div class="card-header">
-            <h3>Notion-like Editor</h3>
-            <span class="date-label">2026.03</span>
-          </div>
-          <ul class="styled-list">
-            基於 Vue 3 與 Django 獨立開發類 Notion 編輯器，實作客製化斜線指令 (Slash Command) 提升 UX，並採用 UUID 與 RESTful API 確保結構化資料的安全儲存。
-          </ul>
-          <BaseButton href="https://github.com/eleanorhhh/tiptap.git" type="primary">
-            🐱 GitHub
-          </BaseButton>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <p>&copy; 2026 Eleanor. Designed for Web.</p>
-    </footer>
-  </div>
+      </div>
+    </div>
+  </section>
 </template>
-
-<script setup lang="ts">
-import BaseButton from './BaseButton.vue'
-
-// 定義 Props 接收主題狀態
-defineProps<{ isDark: boolean }>()
-
-// 定義 Emit 用於通知父組件切換主題
-const emit = defineEmits(['toggleTheme'])
-const emitToggle = () => emit('toggleTheme')
-</script>
-
-<style scoped>
-/* 將原本 App.vue 中的所有 CSS 樣式貼到這裡 */
-.portfolio-root {
-  --bg-main: #f1f5f9;
-  --bg-card: #ffffff;
-  --primary: #2563eb;
-  --text-main: #0f172a;
-  --text-sub: #475569;
-  --border-color: #e2e8f0;
-  --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-  font-family: 'Inter', sans-serif;
-  background-color: var(--bg-main);
-  color: var(--text-main);
-  min-height: 100vh;
-  transition: all 0.3s ease;
-}
-
-.dark-theme {
-  --bg-main: #0f172a;
-  --bg-card: #1e293b;
-  --primary: #60a5fa;
-  --text-main: #f1f5f9;
-  --text-sub: #94a3b8;
-  --border-color: #334155;
-}
-
-.container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
-header { background-color: var(--bg-card); border-bottom: 1px solid var(--border-color); padding: 5rem 0; margin-bottom: 3rem; }
-.info-card { background-color: var(--bg-card); padding: 1.5rem 2rem; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 2rem; box-shadow: var(--card-shadow); transition: transform 0.2s ease; }
-.info-card:hover { transform: translateY(-2px); }
-.highlight-border { border-left: 6px solid var(--primary); }
-.section-title { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 3rem 0 1.5rem 0; display: flex; align-items: center; gap: 0.5rem; }
-.section-title::after { content: ""; flex: 1; height: 1px; background-color: var(--border-color); }
-.date-label { font-size: 0.85rem; color: var(--text-sub); background: var(--bg-main); padding: 2px 8px; border-radius: 4px; }
-.theme-toggle { position: fixed; top: 1.5rem; right: 1.5rem; background: var(--bg-card); border: 1px solid var(--border-color); width: 45px; height: 45px; border-radius: 50%; cursor: pointer; z-index: 1000; }
-.button-group { display: flex; gap: 12px; margin-top: 24px; }
-
-/* --- 新增的 Header 排版樣式 --- */
-.header-content {
-  display: flex;
-  justify-content: space-between; /* 讓文字與圖片分居左右 */
-  align-items: center;            /* 垂直置中 */
-  gap: 2rem;                      /* 避免縮小時文字跟圖片太靠近 */
-}
-
-/* 大頭貼的樣式設計 */
-.profile-avatar {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;             /* 變成圓形 */
-  object-fit: cover;              /* 確保圖片比例正常且填滿圓形 */
-  border: 4px solid var(--border-color); /* 配合主題的邊框 */
-  box-shadow: var(--card-shadow);        /* 加上陰影增加立體感 */
-  transition: transform 0.3s ease;
-}
-
-.profile-avatar:hover {
-  transform: scale(1.05); /* 滑鼠游標移過去時微微放大 */
-}
-
-/* 針對手機版 (RWD) 的調整：螢幕較小時改為直向排列 */
-@media (max-width: 600px) {
-  .header-content {
-    flex-direction: column-reverse; /* 讓圖片在上面，文字在下面 (若想相反可改為 column) */
-    text-align: center;
-  }
-  .button-group {
-    justify-content: center;
-  }
-  .profile-avatar {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 1rem;
-  }
-}
-</style>

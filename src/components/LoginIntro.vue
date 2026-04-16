@@ -91,14 +91,4 @@ progress {
 }
 </style>
 
-<style>
-/* 強制覆蓋 NES.css 的復古滑鼠游標，還原為系統預設 */
-html, body, .nes-container, .retro-fullscreen-overlay {
-  cursor: auto !important;
-}
 
-/* 將可點擊元素的游標還原為預設的手指圖案 */
-a, button, .nes-btn {
-  cursor: pointer !important;
-}
-</style>
