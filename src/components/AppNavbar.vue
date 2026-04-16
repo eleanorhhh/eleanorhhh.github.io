@@ -14,7 +14,7 @@ const navLinks = [
     <div class="max-w-5xl mx-auto px-6 lg:px-8">
       <div class="flex justify-between h-16 items-center">
         <div class="flex-shrink-0 font-bold text-xl tracking-tighter">
-          ELEANOR<span class="text-blue-600">.</span>
+          ELEANOR<span class="text-blue-600">.COM</span>
         </div>
 
         <div class="hidden md:flex space-x-8">

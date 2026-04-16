@@ -1,16 +1,21 @@
 <template>
 
-
+  <AppNavbar/>
+  <AboutSection/>
   <!-- 主要作品集組件 -->
   <PortfolioContent
     :is-dark="isDark"
     @toggle-theme="toggleTheme"
   />
+  <ContactSection/>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
 import PortfolioContent from './components/PortfolioContent.vue'
+import AppNavbar from './components/AppNavbar.vue'
+import AboutSection from './components/AboutSection.vue'
+import ContactSection from './components/ContactSection.vue'
 
 const isDark = ref(false)
 
