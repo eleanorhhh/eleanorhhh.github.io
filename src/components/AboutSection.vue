@@ -1,38 +1,38 @@
 <template>
   <section id="about" class="py-20 px-6 bg-bg-paper">
     <div class="max-w-6xl mx-auto">
-
-      <div class="inline-block bg-brand-yellow border-4 border-black px-6 py-2 mb-12 shadow-neo -rotate-2">
-        <h2 class="text-4xl font-black uppercase tracking-tight text-black">
-          Who is Eleanor?
-        </h2>
+      <div
+        class="inline-block bg-brand-yellow border-4 border-black px-6 py-2 mb-12 shadow-neo -rotate-2"
+      >
+        <h2 class="text-4xl font-black uppercase tracking-tight text-black">Who is Eleanor?</h2>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-
         <div class="lg:col-span-5 relative">
-          <div class="border-4 border-black rounded-3xl overflow-hidden shadow-neo bg-white aspect-square">
+          <div
+            class="border-4 border-black rounded-3xl overflow-hidden shadow-neo bg-white aspect-square"
+          >
             <img
-              src="../assets/profile.JPG"
+              src="../assets/profile.jpg"
               alt="Eleanor"
               class="w-full h-full object-cover transition-all duration-500 hover:scale-105"
             />
           </div>
-          <div class="absolute -bottom-4 -right-4 bg-brand-orange text-white border-2 border-black px-4 py-1 font-bold rotate-6 shadow-neo">
+          <div
+            class="absolute -bottom-4 -right-4 bg-brand-orange text-white border-2 border-black px-4 py-1 font-bold rotate-6 shadow-neo"
+          >
             CS Major 💻
           </div>
         </div>
 
         <div class="lg:col-span-7 space-y-6">
           <div class="bg-white border-4 border-black p-8 shadow-neo relative">
-            <h3 class="text-2xl font-black mb-4 text-brand-blue">
-              從邏輯出發，探索互動的溫度
-            </h3>
+            <h3 class="text-2xl font-black mb-4 text-brand-blue">從邏輯出發，探索互動的溫度</h3>
 
             <p class="text-lg font-bold leading-relaxed text-gray-800">
-              我是 Eleanor，目前就讀資訊工程系大三。我喜歡用程式邏輯解決問題，
-              但在開發 <span class="bg-brand-yellow px-1 border-b-2 border-black">Notion-like 編輯器</span> 的過程中，
-              我發現自己更著迷於「人與介面之間的互動」。
+              我是 Eleanor，目前就讀資訊工程系大三。我喜歡用程式邏輯解決問題， 但在開發
+              <span class="bg-brand-yellow px-1 border-b-2 border-black">Notion-like 編輯器</span>
+              的過程中， 我發現自己更著迷於「人與介面之間的互動」。
             </p>
 
             <p class="text-lg font-bold leading-relaxed text-gray-800 mt-4">
@@ -42,9 +42,18 @@
             </p>
 
             <div class="flex flex-wrap gap-3 mt-8">
-              <span class="bg-brand-blue text-white border-2 border-black px-3 py-1 text-sm font-black">Full-stack Dev</span>
-              <span class="bg-brand-orange text-white border-2 border-black px-3 py-1 text-sm font-black">UI/UX Design</span>
-              <span class="bg-brand-yellow text-black border-2 border-black px-3 py-1 text-sm font-black">Interactive Logic</span>
+              <span
+                class="bg-brand-blue text-white border-2 border-black px-3 py-1 text-sm font-black"
+                >Full-stack Dev</span
+              >
+              <span
+                class="bg-brand-orange text-white border-2 border-black px-3 py-1 text-sm font-black"
+                >UI/UX Design</span
+              >
+              <span
+                class="bg-brand-yellow text-black border-2 border-black px-3 py-1 text-sm font-black"
+                >Interactive Logic</span
+              >
             </div>
           </div>
 
@@ -55,7 +64,6 @@
             </p>
           </div>
         </div>
-
       </div>
     </div>
   </section>

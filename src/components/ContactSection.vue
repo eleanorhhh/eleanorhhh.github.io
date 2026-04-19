@@ -1,3 +1,24 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const email = 'tinafa3222@gmail.com'
+const copied = ref(false)
+
+const copyEmail = async () => {
+  try {
+    await navigator.clipboard.writeText(email)
+    copied.value = true
+
+    // 2 秒後恢復原狀
+    setTimeout(() => {
+      copied.value = false
+    }, 2000)
+  } catch (err) {
+    console.error('無法複製 Email', err)
+  }
+}
+</script>
+
 <template>
   <section id="contact" class="py-20 px-6 bg-bg-paper">
     <div class="max-w-4xl mx-auto text-center">
@@ -25,10 +46,17 @@
         </a>
 
         <button
-          class="bg-white text-black border-4 border-black p-6 shadow-neo flex items-center justify-center gap-4 hover:rotate-2 transition-transform"
+          @click="copyEmail"
+          class="bg-brand-yellow text-black border-4 border-black p-6 shadow-neo flex items-center justify-center gap-4 hover:rotate-2 transition-all active:translate-x-1 active:translate-y-1 active:shadow-none"
         >
-          <span class="text-2xl font-black">E-MAIL</span>
-          <span class="text-sm font-bold underline">tinafa3222@gmail.com</span>
+          <div v-if="!copied" class="flex items-center gap-4">
+            <span class="text-2xl font-black">E-MAIL</span>
+            <span class="text-sm font-bold underline">{{ email }}</span>
+          </div>
+          <div v-else class="flex items-center gap-2">
+            <span class="text-2xl font-black uppercase">Copied!</span>
+            <span class="text-xl">✨</span>
+          </div>
         </button>
       </div>
 
@@ -46,7 +74,6 @@
 </template>
 
 <style scoped>
-/* 讓整體陰影在懸停時更有動感 */
 .shadow-neo {
   transition: all 0.2s ease;
 }
