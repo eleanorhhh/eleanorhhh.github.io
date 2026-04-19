@@ -13,7 +13,7 @@
             class="border-4 border-black rounded-3xl overflow-hidden shadow-neo bg-white aspect-square"
           >
             <img
-              src="../assets/profile.jpg"
+              src="../assets/profile.webp"
               alt="Eleanor"
               class="w-full h-full object-cover transition-all duration-500 hover:scale-105"
             />
